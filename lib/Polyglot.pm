@@ -1,4 +1,4 @@
-# $Id: Polyglot.pm,v 1.4 2004/09/16 02:26:48 comdog Exp $
+# $Id: Polyglot.pm,v 1.6 2005/03/12 04:31:34 comdog Exp $
 package Polyglot;
 use strict;
 use vars qw($VERSION);
@@ -56,7 +56,7 @@ use autouse 'Data::Dumper' => 'Dumper';
 use Carp qw(carp);
 use Text::ParseWords qw( quotewords );
 
-$VERSION = '0.10';
+$VERSION = '0.11';
 
 my $Debug = $ENV{DEBUG} || 0;
 
@@ -146,7 +146,7 @@ state.
 
 =cut
 
-sub state  { 'state' }
+sub state ()  { 'state' }
 
 =item action
 
@@ -154,7 +154,7 @@ Returns the string used to mark a directive that performs an action.
 
 =cut
 
-sub action { 'action' }
+sub action () { 'action' }
 
 
 =item add( DIRECTIVE, TYPE, CODEREF, INITIAL_VALUE, HELP )
@@ -272,6 +272,11 @@ sub add_toggle
 	$self;
 	}
 
+=item help
+
+Returns a help message: you want to override this.
+
+=cut
 
 sub help
 	{
@@ -352,7 +357,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>.
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2004, brian d foy, All rights reserved
+Copyright 2002-2005, brian d foy, All rights reserved
 
 This software is available under the same terms as perl.
 
