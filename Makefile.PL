@@ -1,20 +1,8 @@
-# $Id: Makefile.PL,v 1.2 2004/09/16 02:26:48 comdog Exp $
+# $Id: Makefile.PL,v 1.3 2006/06/08 05:41:52 comdog Exp $
 use ExtUtils::MakeMaker;
 
-eval "use Test::Manifest";
+eval "use Test::Manifest 1.14";
 
-unless( $@ )
-	{
-	*ExtUtils::MM_Any::test_via_harness = sub
-		{
-		my($self, $perl, $tests) = @_;
-		
-		return qq|\t$perl "-MTest::Manifest" | .
-			qq|"-e" "run_t_manifest(\$(TEST_VERBOSE), '\$(INST_LIB)', | .
-			qq|'\$(INST_ARCHLIB)')"\n|;
-		}
-	}
-	
 WriteMakefile(
     'NAME'		    => 'Polyglot',
     'VERSION_FROM'	=> 'lib/Polyglot.pm',
