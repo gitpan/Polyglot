@@ -1,4 +1,4 @@
-# $Id: load.t,v 1.3 2004/09/16 21:23:59 comdog Exp $
+# $Id: load.t 1474 2004-09-16 21:23:59Z comdog $
 BEGIN {
 	@classes = qw(Polyglot);
 	}

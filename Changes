@@ -1,5 +1,8 @@
-# $Id: Changes,v 1.6 2007/01/10 04:41:53 comdog Exp $
+# $Id: Changes 2505 2008-01-18 10:42:43Z comdog $
 Revision history for Perl extension Polyglot.
+
+0.14 - Fri Jan 18 04:42:31 2008
+	* Distro cleanups. No big whoop.
 
 0.13 - Tue Jan  9 22:42:05 2007
 	* updated copyright and license info
